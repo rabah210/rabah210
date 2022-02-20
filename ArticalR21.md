@@ -34,7 +34,21 @@ int main (){
 
 output :
 
-here is a picture
+ ```
+  Hello in my would *-* 
+  Hello in my would *-*  
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+  Hello in my would *-*
+ ```
 
 
 Well, this is a problem that restricts the interaction of our programs with the user and complicates our work more, but this does not mean that it is a problem that has no solution, when we learned to program we were told that you are programmed to solve problems??
