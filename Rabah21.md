@@ -5,12 +5,13 @@
 
 We have many problems that we suffer from in writing our code, including the operating systems, which made the use of certain libraries confined to a specific system. It will not work on another operating system because you are using libraries that will not be compatible, for example, with Linux.  This is a problem, especially in the C programming language. Among these libraries is the windows.h library that works that creates this problem is the Windows OS, but it will not work on another operating system on Linux or Android (phones) and examples of this are this code :
  
- ...
+ ...c
 #include <stdio.h>
 #include <windows.h>
+...
 void Color(int ForgC){
      WORD wColor;
-
+...
       HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
       CONSOLE_SCREEN_BUFFER_INFO csbi;
 
@@ -21,7 +22,7 @@ void Color(int ForgC){
           wColor = (csbi.wAttributes & 0xF0) + (ForgC & 0x0F);
           SetConsoleTextAttribute(hStdOut, wColor);
      }
-     return;
+   ...  return;
  }
 int main (){
 int i;
