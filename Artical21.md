@@ -1,8 +1,8 @@
 #Title
-## Sub title
-### Sub sub title
+## sub title
+### sub sub title
  We have many problems that we suffer from in writing our code, including the operating systems, which made the use of certain libraries confined to a specific system. It will not work on another operating system because you are using libraries that will not be compatible, for example, with Linux.  This is a problem, especially in the C programming language. Among these libraries is the windows.h library that works that creates this problem is the Windows OS, but it will not work on another operating system on Linux or Android (phones) and examples of this are this code : 
-...c
+```c
 #include <stdio.h>
 #include <windows.h>
 void Color(int ForgC){
@@ -28,7 +28,7 @@ puts("Hello in my would *-*");
 }
 
 }
-...
+```
 output :
 
 Hello in my would *-* 
