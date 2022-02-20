@@ -28,7 +28,7 @@ puts("Hello in my would *-*");
 }
 
 }
-...c
+...
 output :
 
 Hello in my would *-* 
