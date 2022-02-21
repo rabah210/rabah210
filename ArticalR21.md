@@ -34,7 +34,7 @@ int main (){
  ```
 
 output :
-![CHEESE!][image](https://user-images.githubusercontent.com/99510124/155007548-5f936ec2-34cb-423c-b384-52d16493484d.png)
+![github-amall][image](https://user-images.githubusercontent.com/99510124/155007548-5f936ec2-34cb-423c-b384-52d16493484d.png)
 
 
 Well, this is a problem that restricts the interaction of our programs with the user and complicates our work more, but this does not mean that it is a problem that has no solution, when we learned to program we were told that you are programmed to solve problems??
