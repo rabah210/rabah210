@@ -32,8 +32,9 @@ int main (){
 
 }
  ```
+ output :
 
-output :
+
 ![CHEESE!](https://user-images.githubusercontent.com/99510124/155011363-44019487-1eb6-46f1-958c-6a5b24530f71.png)
 
 
