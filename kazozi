@@ -1,0 +1,144 @@
+#include <stdio.h>
+#include <stdbool.h>
+/// Exo1 :
+int foi(int number)
+{
+    if ( number == 1 ) return 1;
+    return number * foi( number-1 );
+}
+int add ( int number )
+{
+    if (number == 1) return 0;
+    return add ( number -1 ) + number;
+}
+/// Exo2 :
+bool checks( int number )
+{
+    if( number <4 && number >0 ) return true;
+    else return false ;
+}
+/// Exo3 :
+int checks2(int number)
+{
+    if( number < 10 ) return 0;
+    else if( number > 20 ) return 2;
+    else return 1;
+}
+/// Exo4 :
+int ret_num( int number, int counter )
+{
+    counter++;
+    if(counter == 12) return 0;
+    printf("%i,",number);
+    return ret_num(number + 1, counter) ;
+}
+/// Exo5 :
+int sum(int number)
+{
+    if (number == 0 ) return 0;
+    return sum(number -1) + number ;
+}
+/// Exo6 :
+int fact(int number)
+{
+    if (number == 1) return 1;
+    return number * fact(number - 1);
+}
+/// Exo7 :
+int tableau(int number,int counter)
+{
+    counter++;
+    printf("%i x %i = %i\n",number,counter,number*counter);
+    if (counter == 10) return 1;
+    return tableau(number,counter);
+}
+/// Exo8 :
+int max(int T[],int sz,int index)
+{   if(index == sz - 1) return T[ sz -1 ];
+    if(T[index] > T[index + 1] )  T[ index + 1 ] = T[ index ];
+    index++;
+    return max(T,sz,index);
+}
+/// Exo9 :
+double calcule_Y(int number,int p){
+if( number > 20 ){
+    if ( p == 1 ) return 1;
+    return number * calcule_Y(number,p-1);
+}
+else {
+    if(number == 1) return 1;
+    return number * calcule_Y(number-1,0);
+}
+}
+/// Exo10 :
+int exo(int number1 ,int number2){
+    if(number2 == 1) return number1;
+    return  number1 + exo( number1 , number2 - 1);
+}
+int main ()
+{
+    /// Exo1 :
+    unsigned int num;
+    printf(" Give me a number : ");
+    scanf("%i",&num);
+    printf("%i",foi( num ));
+    printf("\n%i",add( num ));
+    /// Exo2 :
+    do
+    {
+        printf("\nRe-enter again : ");
+        scanf("%i",&num);
+    }
+    while ( checks( num ) == false );
+
+    /// Exo3 :
+    printf("\nGive me a number : ");
+    scanf("%i",&num);
+    if ( checks2(num) == 0 ) puts("\nplus petit");
+    else if ( checks2(num) == 1 ) puts("\nplus grand");
+    else puts("\nconvienne");
+
+    /// Exo4 :
+    printf("\nGive me a number : ");
+    scanf("%i",&num);
+    ret_num(num + 1, 0);
+
+    /// Exo5 :
+    printf("\nGive me a number : ");
+    scanf("%i",&num);
+    printf("The sum is : %i",sum( num ));
+
+    /// Exo6 :
+    printf("\nGive me a number : ");
+    scanf("%i",&num);
+    printf("The fact of %i is : %i",num,fact(num));
+
+    /// Exo7 :
+    printf("\nGive me a number : ");
+    scanf("%i",&num);
+    tableau(num,0);
+
+    /// Exo8 :
+    int size;
+    printf("\nGive me a size : ");
+    scanf("%i",&size);
+    int Tab[size],index;
+    for(index = 0 ; index < size ; index++)
+    {
+        printf("\n Array[%i] =  ",index);
+        scanf("%i",&Tab[index]);
+    }
+        printf("The max is : %i",max(Tab,size,0));
+
+    /// Exo9 :
+    printf("\nGive me a number : ");
+    scanf( "%i",&num );
+    printf("Y = %f",calcule_Y(num,10));
+
+    /// Exo10 :
+    int num2;
+    printf("\nGive me a number : ");
+    scanf( "%i\n%i",&num,&num2 );
+    printf("The miltupe is : %i",exo(num,num2));
+
+}
